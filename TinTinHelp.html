@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>TinTin++ Help</title>
 <meta http-equiv='content-type' content='text/html; charset=utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <style type='text/css'>
@@ -738,8 +739,7 @@ Command</span><span style='color:#AAA'>: #delay </span><span style='color:#FFF'>
 </span><span style='color:#AAA'>           Save the editor to the provided variable.
 
          </span><span style='color:#FFF'>#edit suspend
-</span><span style='color:#AAA'>           Suspend editing, similar to pressing enter except that no
-           events are triggered.
+</span><span style='color:#AAA'>           Suspend editing, similar to pressing enter except that no events are triggered.
 
          </span><span style='color:#FFF'>#edit write [filename]
 </span><span style='color:#AAA'>           Write the editor content to file.
@@ -1139,9 +1139,7 @@ Command</span><span style='color:#AAA'>: #delay </span><span style='color:#FFF'>
 
 </span><span style='color:#FFF'>Command</span><span style='color:#AAA'>: #foreach </span><span style='color:#FFF'>{</span><span style='color:#AAA'>list</span><span style='color:#FFF'>} {</span><span style='color:#AAA'>variable</span><span style='color:#FFF'>} {</span><span style='color:#AAA'>commands</span><span style='color:#FFF'>}
 
-</span><span style='color:#AAA'>         For each item in the provided list the foreach statement will update
-         the given variable and execute the command part of the statement. List
-         elements must be separated by braces or semicolons.
+</span><span style='color:#AAA'>         For each item in the provided list the foreach statement will update the given variable and execute the command part of the statement. List elements must be separated by braces or semicolons.
 
 </span><span style='color:#FFF'>Example</span><span style='color:#AAA'>: #foreach {bob;tim;kim} {name} {tell &dollar;name Hello}
 </span><span style='color:#FFF'>Example</span><span style='color:#AAA'>: #foreach {{bob}{tim}{kim}} {name} {tell &dollar;name Hello}
@@ -1582,9 +1580,7 @@ Example</span><span style='color:#AAA'>: #action </span><span style='color:#FFF'
 
 </span><span style='color:#FFF'>Command</span><span style='color:#AAA'>: #highlight </span><span style='color:#FFF'>{</span><span style='color:#AAA'>text</span><span style='color:#FFF'>} {</span><span style='color:#AAA'>color</span><span style='color:#FFF'>}
 
-</span><span style='color:#AAA'>         This command works a bit like #action. The purpose of this command is
-         to substitute text from the server with color you provide. This command
-         is a simplified version of the #substitute command.
+</span><span style='color:#AAA'>         This command works a bit like #action. The purpose of this command is to substitute text from the server with color you provide. This command is a simplified version of the #substitute command.
 
 </span><span style='color:#FFF'>Example</span><span style='color:#AAA'>: #high </span><span style='color:#FFF'>{</span><span style='color:#AAA'>Snowy</span><span style='color:#FFF'>} {</span><span style='color:#AAA'>light yellow</span><span style='color:#FFF'>}
 
@@ -1636,9 +1632,7 @@ Example</span><span style='color:#AAA'>: #high </span><span style='color:#FFF'>{
 
          </span><span style='color:#5F5'>Map commands
 
-</span><span style='color:#AAA'>         TinTin++ has a powerful highly configurable automapper. Whenever
-         you type n/ne/e/se/s/sw/w/nw/n/u/d tt++ tries to keep track of your
-         movement.
+</span><span style='color:#AAA'>         TinTin++ has a powerful highly configurable automapper. Whenever you type n/ne/e/se/s/sw/w/nw/n/u/d tt++ tries to keep track of your movement.
 
          Commands for map:
 
@@ -3053,9 +3047,7 @@ Example</span><span style='color:#AAA'>: #high </span><span style='color:#FFF'>{
 </span><span style='color:#FFF'>     { } </span><span style='color:#AAA'>embed a raw regular expression, matches are stored to %1-%99.
 </span><span style='color:#FFF'>   %!{ } </span><span style='color:#AAA'>embed a raw regular expression, matches are not stored.
 
-</span><span style='color:#FFF'>         </span><span style='color:#AAA'>[ ] . + | ( ) ? * are treated as normal text unlessed used within
-</span><span style='color:#FFF'>         </span><span style='color:#AAA'>braces. Keep in mind that { } is replaced with ( ) automatically
-</span><span style='color:#FFF'>         </span><span style='color:#AAA'>unless %!{ } is used.
+</span><span style='color:#FFF'>         </span><span style='color:#AAA'>[ ] . + | ( ) ? * are treated as normal text unlessed used within braces. Keep in mind that { } is replaced with ( ) automatically unless %!{ } is used.
 
          Of the following the (lazy) match is available at %1-%99 + 1
 
@@ -3123,8 +3115,7 @@ Example</span><span style='color:#AAA'>: #high </span><span style='color:#FFF'>{
 
 </span><span style='color:#FFF'>Command</span><span style='color:#AAA'>: #return </span><span style='color:#FFF'>{</span><span style='color:#AAA'>text</span><span style='color:#FFF'>}
 
-</span><span style='color:#AAA'>         This command can be used to break out of a command string being
-         executed.
+</span><span style='color:#AAA'>         This command can be used to break out of a command string being executed.
 
          If used inside a #function you can use #return with an argument to both break out of the function and set the result variable.
 
@@ -3302,21 +3293,15 @@ Example</span><span style='color:#AAA'>: #high </span><span style='color:#FFF'>{
 
          #session {-}        Switch to the previous session.
          #session {+}        Switch to the next session.
-         #session {&lt;number&gt;} Switch to the given session. Session 0 is the
-                             startup session, +1 the first, +2 the second, and
-                             -1 is the last session. Sessions are (currently)
-                             sorted in order of creation.
+         #session {&lt;number&gt;} Switch to the given session. Session 0 is the startup session, +1 the first, +2 the second, and -1 is the last session. Sessions are (currently) sorted in order of creation.
          #gts                Switch to the startup session. The name gts stands
                              for global tintin session.
          #ats                Switch to the active session. The name ats stands
                              for active tintin session.
                              not necessarily the calling session.
          #{name}             Activates to the session with the given name.
-         #{name} {command}:  Executes a command with the given session without
-                             changing the active session.
-         @&lt;name&gt;{text}:      Parse text in the given session, substituting the
-                             variables and functions, and print the result in
-                             the current active session.
+         #{name} {command}:  Executes a command with the given session without changing the active session.
+         @&lt;name&gt;{text}:      Parse text in the given session, substituting the variables and functions, and print the result in the current active session.
 
          The startup session is named 'gts' and can be used for relog scripts. Do keep in mind that tickers do not work in the startup session.
 

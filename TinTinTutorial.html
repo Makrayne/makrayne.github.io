@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TinTin++ Tutorial</title>
 <style type="text/css">
-body {font-family:"Cascadia Code NF", monospace;font-size:12pt}
+body {font-family:Consolas;font-size:12pt}
 pre {white-space: pre-wrap;word-wrap:break-word;}
 a {text-decoration:none}
 a:link {color:#06b}
@@ -624,11 +624,11 @@ Example</span><span style="color:#AAA">: #high </span><span style="color:#FFF">{
 
          Brace lists cannot be stored as variables because TinTin++ will confuse them with tables. You can convert a brace list to a table variable using: #list {bracelist} {create} {{a}{b}{c}} this will look internally as: {{1}{a}{2}{b}{3}{c}}. 
 		 
-		 You can then convert this table back to a simple list using: #list {bracelist} {simplify} which will change it to {a;b;c}.
+         You can then convert this table back to a simple list using: #list {bracelist} {simplify} which will change it to {a;b;c}.
 
          Braces cannot easily be escaped in TinTin++. Using \{ or \} will not work. The reason for this is due to several factors, but primarily backward compatibility. To escape braces you must define them using hexadecimal notation using \x7B and \x7D. 
 		 
-	 See #help escape for a list of escape options, and the help file will also remind you of how to escape braces.
+         See #help escape for a list of escape options, and the help file will also remind you of how to escape braces.
 
 </span><span style="color:#5F5">         Tables
 

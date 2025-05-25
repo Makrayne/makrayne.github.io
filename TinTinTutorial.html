@@ -624,7 +624,7 @@ Example</span><span style="color:#AAA">: #high </span><span style="color:#FFF">{
 
          Brace lists cannot be stored as variables because TinTin++ will confuse them with tables. You can convert a brace list to a table variable using: #list {bracelist} {create} {{a}{b}{c}} this will look internally as: {{1}{a}{2}{b}{3}{c}}. 
 		 
-         You can then convert this table back to a simple list using: #list {bracelist} {simplify} which will change it to {a;b;c}.
+	 You can then convert this table back to a simple list using: #list {bracelist} {simplify} which will change it to {a;b;c}.
 
          Braces cannot easily be escaped in TinTin++. Using \{ or \} will not work. The reason for this is due to several factors, but primarily backward compatibility. To escape braces you must define them using hexadecimal notation using \x7B and \x7D. 
 		 
